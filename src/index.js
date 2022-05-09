@@ -13,10 +13,8 @@ const server = new ApolloServer({
 
 const { url, port } = await server.listen({ post: process.env.PORT || 4000 });
 
-server.listen().then(() => {
-	console.log(`
+console.log(`
         🚀  Server is running!
         🔉  Listening on port ${port}
         📭  Query at ${url}
     `);
-});
